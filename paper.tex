@@ -133,6 +133,10 @@
 %   solution!
 
 \begin{abstract}
+Programming for JavaScript VM's is an error-prone task. ClojureScript is
+a dynamically typed Lisp dialect that compiles to JavaScript, with an emphasis
+on immutable data structures and close interaction with the host platform.
+Typed ClojureScript is an optional type system...
 \end{abstract}
 
 %\category{CR-number}{subcategory}{third-level}
@@ -169,12 +173,35 @@ This is how to cite~\cite{Tob10} something.
 Here are our main contributions.
 
 \begin{itemize}
-  \item We 
-  \item We identify
-  \item We show
+  \item We discuss how Typed Clojure and Typed ClojureScript,
+        like Clojure and ClojureScript, differ mostly in its host interoperability facilities.
+        We describe how we exploit the similarities with a shared implementation of the
+        type checker and shared annotations. (Section~\ref{differences-tc})
+  \item We demonstrate how existing cross-compilation tools for writing Clojure and
+        ClojureScript compatible code also extend to Typed Clojure and Typed ClojureScript.
+        This enables users to write code that compiles to, and type checks in the context of,
+        both the Java Virtual Machine and JavaScript virtual machines while still exploiting
+        the benefits of each specific host. (Section~\ref{cross-compile})
+  \item We demonstrate how harvesting the extensive library of TypeScript
+        and Google Closure annotations
+        can help programmers correctly interact with JavaScript code from ClojureScript,
+        without the significant burden of annotating external code. (Section~\ref{js-ann})
+  \item We elaborate on the potential of implementing Chaperones and Impersonators~\cite{strickland2012chaperones}
+        for ClojureScript's core abstractions, which is an important step towards
+        classifying Typed ClojureScript as \emph{gradually typed}. (Section~\ref{towards-gradual})
 \end{itemize}
 
-\section*{Inner sections...}
+\section{Differences from Typed Clojure}
+\label{differences-tc}
+
+\section{Cross-Compilation}
+\label{cross-compile}
+
+\section{External JavaScript Annotations}
+\label{js-ann}
+
+\section{Towards Gradual Typing}
+\label{towards-gradual}
 
 \begin{lstlisting}[float]
 ;; How to make a floating listing
