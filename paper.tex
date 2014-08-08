@@ -198,6 +198,18 @@ Here are our main contributions.
 \label{cross-compile}
 
 \section{External JavaScript Annotations}
+ Typed ClojureScript is not the only AltJS (Languages that compiles to JavaScript) that features static type system.  TypeScript, being arguably the most popular language among them, has a lot of popular JavaScript libraries typed for it.  We are developing a transpiler which translates TypeScript type definitions into Typed ClojureScript annotations to take advantage of the assets TypeScript community has.
+
+WIP:
+ implementation detail
+ option 1 manually parse d.ts
+ eg: https://github.com/sjrd/scala-js-ts-importer
+
+ option 2 use typescript AST
+ eg: https://github.com/mizchi/dts-parser
+
+ other
+ memo: https://github.com/teppeis/closure-library.d.ts -- d.ts for google closure library
 \label{js-ann}
 
 \section{Towards Gradual Typing}
@@ -209,5 +221,8 @@ Here are our main contributions.
 \end{lstlisting}
 
 \printbibliography[title=References]
+\begin{itemize}
+  \item TypeScript http://www.typescriptlang.org/
+\end{itemize}
 
 \end{document}
